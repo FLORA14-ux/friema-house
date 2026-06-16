@@ -10,12 +10,15 @@
 <body>
     <!-- Header / Hero -->
     <section class="header-section">
-        <div class="container">
+        <div class="container navbar-container">
             <header class="navbar">
                 <div class="logo">
                     <img src="images/logo.jpeg" alt="Logo Friema House">
                 </div>
-                <nav>
+                <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <nav id="mainNav">
                     <ul>
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#produits">Produits</a></li>
@@ -24,16 +27,15 @@
                     </ul>
                 </nav>
             </header>
+        </div>
 
-            <div class="row" id="accueil">
-                <div class="col-2">
-                    <h1>L'élégance pour <br> toute la famille</h1>
-                    <p>Bienvenue chez Friema House, votre boutique de référence pour les vêtements et accessoires de qualité destinés aux hommes, aux femmes et aux enfants.</p>
-                    <a href="#produits">Explorer Maintenant &#8594;</a>
-                </div>
-                <div class="col-2">
-                    <img src="images/hero.jpg" alt="Friema House - Vêtements">
-                </div>
+        <div class="hero-fullscreen" id="accueil">
+            <img src="images/hero.jpg" alt="Friema House - Vêtements" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>L'élégance pour <br> toute la famille</h1>
+                <p>Bienvenue chez Friema House, votre boutique de référence pour les vêtements et accessoires de qualité destinés aux hommes, aux femmes et aux enfants.</p>
+                <a href="#produits" class="hero-btn">Explorer Maintenant &#8594;</a>
             </div>
         </div>
     </section>
@@ -42,22 +44,34 @@
     <section class="categories" id="produits">
         <div class="container">
             <h2>Nos Catégories</h2>
-            <p class="categories-hint">Cliquez sur une catégorie pour découvrir nos produits</p>
-            <div class="row category-grid">
+            <p class="categories-hint">Touchez une catégorie pour découvrir les produits</p>
+            <div class="category-grid">
                 <div class="col-3 category-card" data-category="homme">
-                    <img src="images/category-homme.jpg" alt="Mode Homme">
+                    <div class="category-img-wrap">
+                        <img src="images/category-homme.jpg" alt="Mode Homme">
+                        <span class="category-badge">Voir plus <i class="fa fa-arrow-right"></i></span>
+                    </div>
                     <h4>Mode Homme</h4>
                 </div>
                 <div class="col-3 category-card" data-category="femme">
-                    <img src="images/category-femme.jpg" alt="Mode Femme">
+                    <div class="category-img-wrap">
+                        <img src="images/category-femme.jpg" alt="Mode Femme">
+                        <span class="category-badge">Voir plus <i class="fa fa-arrow-right"></i></span>
+                    </div>
                     <h4>Mode Femme</h4>
                 </div>
                 <div class="col-3 category-card" data-category="enfant">
-                    <img src="images/category-enfant.jpg" alt="Mode Enfant">
+                    <div class="category-img-wrap">
+                        <img src="images/category-enfant.jpg" alt="Mode Enfant">
+                        <span class="category-badge">Voir plus <i class="fa fa-arrow-right"></i></span>
+                    </div>
                     <h4>Mode Enfant</h4>
                 </div>
                 <div class="col-3 category-card" data-category="accessoires">
-                    <img src="images/category-accessoires.jpg" alt="Accessoires">
+                    <div class="category-img-wrap">
+                        <img src="images/category-accessoires.jpg" alt="Accessoires">
+                        <span class="category-badge">Voir plus <i class="fa fa-arrow-right"></i></span>
+                    </div>
                     <h4>Accessoires</h4>
                 </div>
             </div>
@@ -115,12 +129,9 @@
     <!-- Section À propos -->
     <section class="about" id="apropos">
         <div class="container">
-            <h2>À propos de nous</h2>
-            <div class="row">
-                <div class="col-2">
-                    <img src="images/about.png" alt="À propos de Friema House">
-                </div>
-                <div class="col-2">
+            <div class="about-box">
+                <div class="about-text">
+                    <h2 class="about-title">À propos de nous</h2>
                     <p>
                         Bienvenue chez <strong>Friema House</strong>, votre boutique de référence
                         pour les vêtements et accessoires de qualité destinés aux hommes,
@@ -136,6 +147,9 @@
                         Chez Friema House, nous croyons que chaque personne mérite de s'habiller
                         avec style et confiance, quelle que soit l'occasion.
                     </p>
+                </div>
+                <div class="about-logo-frame">
+                    <img src="images/logo.jpeg" alt="Logo Friema House">
                 </div>
             </div>
 
@@ -186,7 +200,7 @@
                     <div class="social-icons">
                         <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a href="https://wa.me/228XXXXXXXX" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://wa.me/22898303670" target="_blank"><i class="fa fa-whatsapp"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-tiktok"></i></a>
                     </div>
                 </div>

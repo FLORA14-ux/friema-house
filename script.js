@@ -1,9 +1,29 @@
 /* ============================================
-   SCRIPT - Affichage du catalogue par catégorie
-   (en modale) - Friema House
+   SCRIPT - Friema House
+   - Menu mobile (hamburger)
+   - Modale catalogue par catégorie
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
+
+    /* ---------- Menu mobile ---------- */
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+            mainNav.classList.toggle('open');
+        });
+
+        // Fermer le menu mobile après clic sur un lien
+        mainNav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                mainNav.classList.remove('open');
+            });
+        });
+    }
+
+    /* ---------- Modale catalogue ---------- */
     const cards = document.querySelectorAll('.category-card');
     const modal = document.getElementById('productModal');
     const galleryGrid = document.getElementById('galleryGrid');
