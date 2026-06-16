@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friema House - L'élégance pour toute la famille</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header / Hero -->
+    <section class="header-section">
+        <div class="container">
+            <header class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpeg" alt="Logo Friema House">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#produits">Produits</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="row" id="accueil">
+                <div class="col-2">
+                    <h1>L'élégance pour <br> toute la famille</h1>
+                    <p>Bienvenue chez Friema House, votre boutique de référence pour les vêtements et accessoires de qualité destinés aux hommes, aux femmes et aux enfants.</p>
+                    <a href="#produits">Explorer Maintenant &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/hero.jpg" alt="Friema House - Vêtements">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section catégories / catalogue -->
+    <section class="categories" id="produits">
+        <div class="container">
+            <h2>Nos Catégories</h2>
+            <p class="categories-hint">Cliquez sur une catégorie pour découvrir nos produits</p>
+            <div class="row category-grid">
+                <div class="col-3 category-card" data-category="homme">
+                    <img src="images/category-homme.jpg" alt="Mode Homme">
+                    <h4>Mode Homme</h4>
+                </div>
+                <div class="col-3 category-card" data-category="femme">
+                    <img src="images/category-femme.jpg" alt="Mode Femme">
+                    <h4>Mode Femme</h4>
+                </div>
+                <div class="col-3 category-card" data-category="enfant">
+                    <img src="images/category-enfant.jpg" alt="Mode Enfant">
+                    <h4>Mode Enfant</h4>
+                </div>
+                <div class="col-3 category-card" data-category="accessoires">
+                    <img src="images/category-accessoires.jpg" alt="Accessoires">
+                    <h4>Accessoires</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modale Galerie produits -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="galleryTitle">Catégorie</h3>
+                <button class="modal-close" id="galleryClose" aria-label="Fermer">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="galleryGrid">
+                    <!-- Produits générés en JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Pourquoi nous choisir -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Pourquoi nous choisir ?</h2>
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-check-circle"></i>
+                    <h4>Produits de qualité</h4>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-check-circle"></i>
+                    <h4>Prix compétitifs</h4>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-check-circle"></i>
+                    <h4>Service client réactif</h4>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-check-circle"></i>
+                    <h4>Large choix pour toute la famille</h4>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-check-circle"></i>
+                    <h4>Livraison rapide</h4>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-check-circle"></i>
+                    <h4>Satisfaction client</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about" id="apropos">
+        <div class="container">
+            <h2>À propos de nous</h2>
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/about.png" alt="À propos de Friema House">
+                </div>
+                <div class="col-2">
+                    <p>
+                        Bienvenue chez <strong>Friema House</strong>, votre boutique de référence
+                        pour les vêtements et accessoires de qualité destinés aux hommes,
+                        aux femmes et aux enfants.
+                    </p>
+                    <p>
+                        Nous sélectionnons avec soin des articles modernes, élégants et confortables
+                        afin de répondre aux besoins de toute la famille. Notre priorité est d'offrir
+                        à nos clients des produits de qualité à des prix accessibles, accompagnés
+                        d'un service fiable et professionnel.
+                    </p>
+                    <p>
+                        Chez Friema House, nous croyons que chaque personne mérite de s'habiller
+                        avec style et confiance, quelle que soit l'occasion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mission-vision">
+                <div class="col-3">
+                    <h3>Notre Mission</h3>
+                    <p>Offrir à nos clients des vêtements et accessoires élégants, modernes et accessibles qui valorisent leur personnalité et leur confiance en eux.</p>
+                </div>
+                <div class="col-3">
+                    <h3>Notre Vision</h3>
+                    <p>Devenir une référence dans la mode et les accessoires en proposant des produits de qualité et une expérience d'achat exceptionnelle.</p>
+                </div>
+                <div class="col-3">
+                    <h3>Nos Valeurs</h3>
+                    <ul class="values-list">
+                        <li>Qualité</li>
+                        <li>Élégance</li>
+                        <li>Confiance</li>
+                        <li>Satisfaction client</li>
+                        <li>Professionnalisme</li>
+                        <li>Innovation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Livraison -->
+    <section class="delivery">
+        <div class="container">
+            <div class="delivery-box">
+                <i class="fa fa-truck"></i>
+                <div>
+                    <h3>Livraison</h3>
+                    <p>Nous assurons la livraison de vos commandes dans les meilleurs délais selon votre localisation. Pour toute demande spécifique, notre équipe reste à votre disposition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <img src="images/logo.jpeg" alt="Logo Friema House" class="footer-logo">
+                    <p>Friema House - L'élégance pour toute la famille. Votre destination mode pour des vêtements tendance et accessoires de qualité.</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://wa.me/228XXXXXXXX" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#produits">Produits</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="#produits">Mode Homme</a></li>
+                        <li><a href="#produits">Mode Femme</a></li>
+                        <li><a href="#produits">Mode Enfant</a></li>
+                        <li><a href="#produits">Accessoires</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fa fa-map-marker"></i> Lomé, Togo</li>
+                        <li><i class="fa fa-phone"></i> +228 XX XX XX XX</li>
+                        <li><i class="fa fa-envelope"></i> contact@friemahouse.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Friema House. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/228XXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <script src="produits.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
