@@ -737,12 +737,24 @@ body.modal-active {
         font-size: 0.95rem;
         margin-top: 8px;
     }
-    .why-us .col-3,
+    .why-us .row {
+        gap: 14px;
+    }
+    .why-us .col-3 {
+        flex-basis: 47%;
+        padding: 14px 8px;
+    }
+    .why-us .col-3 i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .why-us .col-3 h4 {
+        font-size: 0.95rem;
+    }
     .mission-vision .col-3 {
         flex-basis: 100%;
         min-width: 0;
     }
-    .why-us .row,
     .mission-vision {
         gap: 14px;
     }
@@ -798,16 +810,44 @@ body.modal-active {
         height: 140px;
     }
 
-    /* Footer en une colonne */
+    /* Footer mobile : blocs centrés, mieux espacés et séparés */
+    .footer {
+        padding: 45px 0 0;
+    }
     .footer-col {
         flex-basis: 100%;
         text-align: center;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-col:last-child {
+        border-bottom: none;
+        margin-bottom: 10px;
+    }
+    .footer-col h3 {
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+    }
+    .footer-logo {
+        width: 60px;
+        height: 60px;
     }
     .social-icons {
         justify-content: center;
     }
     .footer-col ul {
-        display: inline-block;
+        display: block;
+        text-align: center;
+    }
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+    .footer-col:nth-child(4) ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
         text-align: left;
     }
 
