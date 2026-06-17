@@ -26,6 +26,11 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                <button class="cart-icon-btn" id="cartIconBtn" aria-label="Voir mes commandes">
+                    <i class="fa fa-shopping-bag"></i>
+                    <span>Commandes</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
             </header>
         </div>
 
@@ -88,6 +93,27 @@
             <div class="modal-body">
                 <div class="row" id="galleryGrid">
                     <!-- Produits générés en JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale Panier -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-box cart-box">
+            <div class="modal-header">
+                <h3>Mon panier</h3>
+                <button class="modal-close" id="cartClose" aria-label="Fermer">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItemsList">
+                    <!-- Articles du panier générés en JS -->
+                </div>
+                <p class="cart-empty-msg" id="cartEmptyMsg">Votre panier est vide.</p>
+                <div class="cart-footer" id="cartFooter">
+                    <a href="#" id="cartOrderBtn" class="cart-order-btn" target="_blank">
+                        <i class="fa fa-whatsapp"></i> Commander via WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
