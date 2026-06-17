@@ -120,7 +120,7 @@ p{
 .hero-fullscreen {
     position: relative;
     width: 100%;
-    min-height: 600px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,6 +133,7 @@ p{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 .hero-overlay {
     position: absolute;
@@ -178,7 +179,13 @@ p{
 
 /* Section catégories */
 .categories {
-    margin: 70px 0;
+    margin: 0 0 70px;
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    border-radius: 24px 24px 0 0;
+    padding-top: 1px;
+    margin-top: -30px;
 }
 .categories .container {
     flex-wrap: wrap;
@@ -201,6 +208,10 @@ p{
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
+.category-grid .category-card {
+    min-width: 0;
+    width: 100%;
+}
 .category-grid .category-card h4 {
     margin-top: 15px;
     font-size: 1.1rem;
@@ -211,6 +222,7 @@ p{
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
+    display: block;
 }
 
 /* Cartes catégories cliquables */
@@ -228,6 +240,7 @@ p{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    width: 100%;
 }
 .category-img-wrap img {
     display: block;
@@ -389,23 +402,21 @@ body.modal-active {
 .why-us .container h2 {
     margin-bottom: 30px;
 }
-.col-3 {
-    flex-basis: 30%;
-    min-width: 250px;
-    margin: auto;
-    text-align: center;
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
-.why-us .col-3 {
-    flex-basis: 30%;
+.why-us-grid .why-item {
     padding: 20px;
 }
-.why-us .col-3 i {
+.why-us-grid .why-item i {
     font-size: 2.5rem;
     color: #16a7b4;
     margin-bottom: 15px;
     display: inline-block;
 }
-.why-us .col-3 h4 {
+.why-us-grid .why-item h4 {
     color: #444;
     font-size: 1.1rem;
     margin-top: 0;
@@ -458,11 +469,12 @@ body.modal-active {
     object-fit: cover;
 }
 .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 50px;
-    align-items: flex-start;
 }
 .mission-vision .col-3 {
-    flex-basis: 30%;
     background-color: #f9f9f9;
     padding: 25px;
     border-radius: 10px;
@@ -514,10 +526,19 @@ body.modal-active {
     padding: 60px 0 0;
     margin-top: 80px;
 }
+.footer .row {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px;
+}
 .footer-col {
-    flex-basis: 22%;
-    min-width: 200px;
+    flex-basis: auto;
+    width: 220px;
+    min-width: 170px;
     margin-bottom: 30px;
+}
+.footer-col:first-child {
+    width: 260px;
 }
 .footer-logo {
     width: 70px;
@@ -614,11 +635,19 @@ body.modal-active {
    RESPONSIVE - Tablette (≤ 992px)
    ============================================ */
 @media (max-width: 992px) {
-    .why-us .col-3, .mission-vision .col-3 {
-        flex-basis: 47%;
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .footer-col {
+    .mission-vision {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-col,
+    .footer-col:first-child {
+        width: 45%;
         flex-basis: 45%;
+    }
+    .footer .row {
+        gap: 30px;
     }
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -694,10 +723,10 @@ body.modal-active {
         padding-top: 0;
     }
 
-    /* Hero plein écran */
+    /* Hero mobile : plein écran avec minimum garanti pour le contenu */
     .hero-fullscreen {
-        min-height: 480px;
-        padding: 90px 0 40px;
+        height: 100vh;
+        min-height: 560px;
     }
     .hero-content h1 {
         font-size: 30px;
@@ -737,25 +766,22 @@ body.modal-active {
         font-size: 0.95rem;
         margin-top: 8px;
     }
-    .why-us .row {
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 14px;
     }
-    .why-us .col-3 {
-        flex-basis: 47%;
-        padding: 14px 8px;
+    .why-us-grid .why-item {
+        padding: 14px 6px;
     }
-    .why-us .col-3 i {
+    .why-us-grid .why-item i {
         font-size: 2rem;
         margin-bottom: 10px;
     }
-    .why-us .col-3 h4 {
-        font-size: 0.95rem;
-    }
-    .mission-vision .col-3 {
-        flex-basis: 100%;
-        min-width: 0;
+    .why-us-grid .why-item h4 {
+        font-size: 0.9rem;
     }
     .mission-vision {
+        grid-template-columns: 1fr;
         gap: 14px;
     }
 
@@ -814,7 +840,9 @@ body.modal-active {
     .footer {
         padding: 45px 0 0;
     }
-    .footer-col {
+    .footer-col,
+    .footer-col:first-child {
+        width: 100%;
         flex-basis: 100%;
         text-align: center;
         padding-bottom: 25px;
