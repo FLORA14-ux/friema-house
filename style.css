@@ -11,9 +11,9 @@ body{
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
     gap: 20px;
+    position: relative;
 }
 nav ul li a {
     text-decoration: none;
@@ -27,8 +27,8 @@ nav ul li a:hover {
     color: #fff;
 }
 .logo img {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -57,11 +57,11 @@ nav ul li a:hover {
 }
 
 nav{
-    flex: 0 0 auto;
+    flex: 1;
     text-align: right;
 }
 nav ul {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     list-style: none;
 }
@@ -83,7 +83,7 @@ nav ul li {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    margin-left: 24px;
+    margin-left: auto;
     padding: 0;
     flex: 0 0 auto;
     line-height: 1;
@@ -370,10 +370,94 @@ p{
     top: 0;
     background-color: #fff;
     border-radius: 14px 14px 0 0;
+    gap: 12px;
+}
+.modal-header-left {
+    flex: 1;
+    min-width: 0;
 }
 .modal-header h3 {
     color: #16a7b4;
     font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Fil d'Ariane */
+.modal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+}
+.bc-link {
+    color: #16a7b4;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.bc-link:hover { color: #106e77; }
+.bc-current { color: #888; }
+.bc-sep { font-size: 0.65rem; color: #aaa; }
+
+/* Grille sous-catégories */
+.subcat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.subcat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.subcat-card:hover {
+    background-color: #f0fbfc;
+    border-color: #16a7b4;
+}
+.subcat-icon {
+    width: 42px;
+    height: 42px;
+    background-color: #eafafd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #16a7b4;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+.subcat-info {
+    flex: 1;
+}
+.subcat-info h4 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 0 3px;
+}
+.subcat-info p {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+    line-height: 1;
+}
+.subcat-arrow {
+    color: #bbb;
+    font-size: 0.85rem;
+}
+
+/* Prix produit */
+.product-price {
+    font-weight: 600;
+    color: #16a7b4;
+    font-size: 0.95rem;
+    margin: 4px 0 10px;
+    line-height: 1;
 }
 .modal-close {
     background: none;
@@ -884,10 +968,10 @@ body.modal-active {
         box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         padding: 10px 0;
         position: absolute;
-        left: 15px;
-        right: 15px;
-        top: 70px;
-        z-index: 500;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 900;
     }
     nav#mainNav.open ul {
         display: flex;
