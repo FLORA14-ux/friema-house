@@ -6,7 +6,7 @@
    - Commande via WhatsApp
    ============================================ */
 
-const WHATSAPP_NUMBER = "22898303670";
+const WHATSAPP_NUMBER = "22896578701";
 const CART_STORAGE_KEY = "friemaHouseCart";
 
 document.addEventListener('DOMContentLoaded', function () {
