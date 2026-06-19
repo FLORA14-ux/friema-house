@@ -15,22 +15,30 @@
                 <div class="logo">
                     <img src="images/logo.jpeg" alt="Logo Friema House">
                 </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
-                    <i class="fa fa-bars"></i>
-                </button>
                 <nav id="mainNav">
                     <ul>
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#produits">Produits</a></li>
                         <li><a href="#apropos">À propos</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="mobile-only-item">
+                            <a href="#" id="cartMenuLink">
+                                <i class="fa fa-shopping-bag"></i> Commandes
+                                <span class="cart-count" id="cartCountMobile">0</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-                <button class="cart-icon-btn" id="cartIconBtn" aria-label="Voir mes commandes">
-                    <i class="fa fa-shopping-bag"></i>
-                    <span>Commandes</span>
-                    <span class="cart-count" id="cartCount">0</span>
-                </button>
+                <div class="navbar-right">
+                    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button class="cart-icon-btn" id="cartIconBtn" aria-label="Voir mes commandes">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span>Commandes</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
             </header>
         </div>
 

@@ -55,8 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return Object.values(panier).reduce(function (acc, q) { return acc + q; }, 0);
     }
     function majCompteur() {
+        const total = totalArticles();
         const el = document.getElementById('cartCount');
-        if (el) el.textContent = totalArticles();
+        const elMobile = document.getElementById('cartCountMobile');
+        if (el) el.textContent = total;
+        if (elMobile) elMobile.textContent = total;
     }
     function ajouterAuPanier(id, qte) {
         panier[id] = (panier[id] || 0) + (parseInt(qte, 10) || 1);
@@ -289,6 +292,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (cartModal)   cartModal.addEventListener('click', function (e) {
         if (e.target === cartModal) fermerPanier();
     });
+
+    const cartMenuLink = document.getElementById('cartMenuLink');
+    if (cartMenuLink) {
+        cartMenuLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (mainNav) mainNav.classList.remove('open');
+            ouvrirPanier();
+        });
+    }
 
     if (cartItemsList) {
         cartItemsList.addEventListener('click', function (e) {

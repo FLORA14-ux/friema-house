@@ -181,6 +181,6 @@ const PRODUITS = {
             { nom: "Casquette tendance",      image: "images/produits/accessoire-casquette2.jpg", prix: "3 500 FCFA" },
             { nom: "Casquette tendance",      image: "images/produits/accessoire-casquette3.jpg", prix: "3 500 FCFA" },
             { nom: "Casquette tendance",      image: "images/produits/accessoire-casquette4.jpg", prix: "3 500 FCFA" }
-        ],
+        ]
     }
 };
