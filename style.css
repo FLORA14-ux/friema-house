@@ -15,6 +15,15 @@ body{
     gap: 20px;
     position: relative;
 }
+
+/* Groupe droite : nav + commandes (desktop) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
 nav ul li a {
     text-decoration: none;
     color: #fff;
@@ -71,7 +80,7 @@ nav ul li {
     margin-right: 20px;
 }
 
-/* Bouton "Commandes" (panier) dans la navbar */
+/* Bouton commandes dans la navbar */
 .cart-icon-btn {
     position: relative;
     display: inline-flex;
@@ -83,10 +92,9 @@ nav ul li {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    margin-left: auto;
     padding: 0;
-    flex: 0 0 auto;
     line-height: 1;
+    white-space: nowrap;
 }
 .cart-icon-btn i {
     font-size: 1.3rem;
@@ -931,31 +939,42 @@ body.modal-active {
         padding-right: 18px;
     }
 
-    /* Navbar + menu hamburger */
+    /* Navbar mobile : logo à gauche, navbar-right à droite */
     .navbar {
-        padding: 15px;
-        flex-wrap: wrap;
+        padding: 12px 15px;
+        flex-wrap: nowrap;
+        gap: 0;
     }
     .logo img {
-        width: 55px;
-        height: 55px;
+        width: 52px;
+        height: 52px;
+    }
+    /* nav (liens desktop) : caché par défaut, affiché en flux normal quand ouvert */
+    nav {
+        display: none;
+        flex-basis: 100%;
+    }
+    nav#mainNav.open {
+        display: block;
+    }
+    /* navbar-right : hamburger + panier, poussé à droite */
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin-left: auto;
+        padding-right: 4px;
     }
     .nav-toggle {
         display: block;
-        order: 2;
+        font-size: 1.5rem;
+        color: #fff;
     }
     .cart-icon-btn {
-        order: 3;
-        margin-left: 10px;
         font-size: 1.3rem;
     }
     .cart-icon-btn span:not(.cart-count) {
         display: none;
-    }
-    nav {
-        order: 4;
-        flex: 0 0 100%;
-        text-align: left;
     }
     nav#mainNav ul {
         display: none;
